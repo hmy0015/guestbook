@@ -5,7 +5,6 @@
 
 <%
 	request.setCharacterEncoding("UTF-8");
-
 	GuestBookDao bookDao = new GuestBookDao();
 	
 	String name = request.getParameter("name");
@@ -14,6 +13,5 @@
 	
 	GuestBookVo bookVo = new GuestBookVo(name, pw, content);
 	bookDao.bookInsert(bookVo);
-
 	response.sendRedirect("./addlist.jsp");
 %>
